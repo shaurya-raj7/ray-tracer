@@ -9,10 +9,10 @@ TILESIZE = 32
 PLAYERSIZE = 32
 mapWidth = 18
 mapHeight = 12
-RES= 4
+RES= 1
 NUMRAYS = int(WIDTH/RES)
 FOV = math.pi/3
-
+distncetoprojection = (WIDTH/2)/math.tan(FOV/2)
 
 map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],

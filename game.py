@@ -43,15 +43,15 @@ class Game:
         
         self.Screen.fill((BG_COLOR)) 
         
-        for i in range(12):
+        '''for i in range(12):
             for j in range (18):
                 Color = (0,0,0) if map[i][j] == 1 else (240,240,240)
-                pygame.draw.rect(self.Screen,Color,(j*TILESIZE , i* TILESIZE,TILESIZE-1,TILESIZE-1))
+                pygame.draw.rect(self.Screen,Color,(j*TILESIZE , i* TILESIZE,TILESIZE-1,TILESIZE-1))'''
         
         
             
         
-        self.player.render()
+        #self.player.render()
         self.rayCaster.castRays()
         
        # self.ray.render2D()

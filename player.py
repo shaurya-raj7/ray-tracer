@@ -11,7 +11,7 @@ class Player():
         self.playerAngle = math.pi/6
         self.Screen = Screen
         self.playerSpeed = 100
-        self.playerAngularSpeed = math.pi / 10
+        self.playerAngularSpeed = math.pi / 6
         self.map = map
      
         
@@ -24,13 +24,13 @@ class Player():
         keys = pygame.key.get_pressed()
         
         if keys[pygame.K_w]:
-            self.tempy -= self.playerSpeed*dt
-        elif keys[pygame.K_s]:
-            self.tempy += self.playerSpeed*dt
-        elif keys[pygame.K_a]:
-            self.tempx -= self.playerSpeed*dt
-        elif keys[pygame.K_d]:
             self.tempx += self.playerSpeed*dt
+        elif keys[pygame.K_s]:
+            self.tempx -= self.playerSpeed*dt
+        elif keys[pygame.K_a]:
+            self.tempy -= self.playerSpeed*dt
+        elif keys[pygame.K_d]:
+            self.tempy += self.playerSpeed*dt
         
         self.playerAngle += (keys[pygame.K_RIGHT] - keys[pygame.K_LEFT])* dt* self.playerAngularSpeed 
         self.playerAngle = self.playerAngle% math.tau

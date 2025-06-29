@@ -14,8 +14,7 @@ class RayCaster:
         for i in range(NUMRAYS):
             self.rays.append(Ray(self.player,angle,self.screen,map))
             angle += FOV/NUMRAYS
-        for ray in self.rays:
-            ray.render2D()   
+            (self.rays[i]).render3D(RES*i)   
             
     
     
